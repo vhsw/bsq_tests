@@ -52,12 +52,18 @@ done
 # uncomment if you wanna make you computer cry
 for i in 100 1000 # 10000
 do
+	$MAP_GENERATOR 1 $i 0 | $BSQ
+	$MAP_GENERATOR 1 $i $((i/10)) | $BSQ
 	$MAP_GENERATOR 1 $i $i | $BSQ
 	echo "OK map 1 $i"
 
+	$MAP_GENERATOR $i 1 0 | $BSQ
+	$MAP_GENERATOR $i 1 $((i/10)) | $BSQ
 	$MAP_GENERATOR $i 1 $i | $BSQ
 	echo "OK map $i 1"
 
+	$MAP_GENERATOR $i $i 0 | $BSQ
+	$MAP_GENERATOR $i $i $((i/10)) | $BSQ
 	$MAP_GENERATOR $i $i $i | $BSQ
 	echo "OK map $i $i"
 done
