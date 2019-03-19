@@ -4,12 +4,10 @@ Simple tests for BSQ challenge.
 
 # Usage
 
-Set variables 
+Set variables
 ```bash
-# path to bsq binary
-BSQ=./bsq
-# path to tests folder
-TEST_DIR=tests
+BSQ=/path/to/bsq/binary
+TEST_DIR=/path/to/tests/folder
 ```
 
 then just run script
