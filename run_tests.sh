@@ -1,6 +1,6 @@
-#!/bin/sh
+#!/bin/bash
 
-BSQ=~/clorelei/BSQ/bsq
+BSQ=../BSQ/bsq
 TEST_DIR=tests
 
 MAP_GENERATOR=./map_generator.pl
