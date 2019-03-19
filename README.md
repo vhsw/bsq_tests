@@ -4,7 +4,7 @@ Simple tests for BSQ challenge.
 
 # Usage
 
-Set variables
+Set variables in `run_tests.sh`
 ```bash
 BSQ=/path/to/bsq/binary
 TEST_DIR=/path/to/tests/folder
