@@ -5,6 +5,9 @@ TEST_DIR=tests
 
 MAP_GENERATOR=./map_generator.pl
 passed_tests=1
+FILE_ERROR="map error" # "wrong file path"
+MAP_ERROR="map error"
+
 for file in $TEST_DIR/*.map; do
 	DIFF=$($BSQ $file 2>&1 | diff ${file%.map}.output -)
 	if [ -z "$DIFF" ]
@@ -19,7 +22,7 @@ for file in $TEST_DIR/*.map; do
 done
 
 OUT=$($BSQ jaosjdfoajrotiasdgaergwasdf 2>&1 > /dev/null )
-if [ "$OUT" == "wrong file path" ]
+if [ "$OUT" == "$FILE_ERROR" ]
 then
 	echo "OK missing file"
 else
@@ -29,7 +32,7 @@ else
 fi
 
 OUT=$($BSQ / 2>&1 > /dev/null )
-if [ "$OUT" == "wrong file path" ]
+if [ "$OUT" == "$FILE_ERROR" ]
 then
 	echo "OK dir"
 else
