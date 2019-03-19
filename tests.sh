@@ -1,6 +1,6 @@
 #!/bin/sh
 
-BSQ=./bsq
+BSQ=~/clorelei/BSQ/bsq
 TEST_DIR=tests
 
 passed_tests=1
