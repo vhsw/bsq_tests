@@ -13,5 +13,5 @@ TEST_DIR=/path/to/tests/folder
 then just run script
 
 ```bash
-./tests.sh
+./run_tests.sh
 ```
